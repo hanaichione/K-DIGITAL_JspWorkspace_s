@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function aaa() {
+		console.log("aaa 함수");
+		return 100;
+	}
+	function bbb(x) {
+		console.log("bbb 함수", x);	// 함수 자체가 출력
+		x();	// 함수가 호출되어 내용이 출력
+	}
+	bbb(aaa);	// 인자로 함수를 넘길 수도있음
+	bbb(aaa());	// 100이 넘어가서 x()에서 오류남
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function () {
+		console.log($("input"));
+		$("input").on("select", function () {
+			console.log("이벤트발생");
+			$("div").text("....selected").show().fadeOut(2000);	
+			// show() 써서 반복 가능, 2초 뒤에 글씨 사라짐
+		})
+	})
+</script>
+</head>
+<body>
+	<p>select 실습</p>
+	<input type="text" value="아이템 1 아이템2">
+	<div></div>
+</body>
+</html>

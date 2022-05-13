@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(function () {
+		$("input").click(function () {
+			console.log($("input"))	// click 이벤트 발생시 동작할 익명함수 작성
+			$("input:focus").css("background-color", "yellow");
+			$("input:not(:focus)").removeAttr("style");
+		}	// end func
+		)	// end click
+	}	// end func
+	)	// end docu
+</script>
+</head>
+<body>
+	<input type="text" value="one"></input>
+	<input type="text" value="two"></input>
+	<input type="text" value="three"></input>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(function () {
+	// 전체문서 중 first
+	var x = $(":first");
+	console.log(x);	// html
+	
+	var x = $(":last");
+	console.log(":last>>>", x);	// <div>hello-endenenenenenenen</div>
+	
+	var x = $("li:last");
+	console.log(x);	// <li>b4</li>
+})
+</script>
+</head>
+<body>
+<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>
+		<p>Hello</p>
+		<p>hello-end</p>
+	</div>
+	<div>hello-endenenenenenenen</div>
+
+</body>
+</html>

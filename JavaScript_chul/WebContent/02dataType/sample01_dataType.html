@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	// 0. 변수는 타입 선언 없이 var 사용
+	var test;
+	console.log(test);	//undefined
+	test=10;
+	console.log(test);
+	test='홍길동';
+	console.log(test);
+	
+	// 변수 선언과 동시에 초기화 - 타입 선언 불필요 var로 선언
+	var name = "홍길동";	
+	var age = 20;
+	var array = [1,2,3,4];	// 배열 array
+	var obj = {"username":"이순신", "age":44};	// 객체의 JSON (key:value, key:value)
+	var result = true;
+	var xxx;	// unde
+	var kkk = null;	// null
+	var zzz = function(){};	// 함수 객체 변수에 함수를 저장 가능
+	
+	// NaN (Not a Number)
+	var xyz = parseInt("123");	// 자바의 Integer.parseInt()와 동일
+	console.log(xyz+10);	// 133
+	
+	var xyz2 = parseInt("hello");
+	console.log(xyz2);	// NaN
+	
+	name = 200;
+	console.log(name);
+	
+	console.log(array);
+	console.log(obj);
+	
+	// JSON 객체 사용법
+	console.log("obj.username", obj.username, "obj.age", obj.age);
+	console.log("obj['username']", obj['username']);	
+	console.log("obj[0]", obj[0]);	// unde
+	
+	//
+	console.log(result);
+	console.log(xxx);
+	console.log(kkk);
+	console.log("function", zzz);
+	
+	// 객체에 없는 프로퍼티 접근은 undefined
+	var foo = {
+			"name":'sss',
+			"age":20
+	}
+	console.log(foo.name + "\t"+ foo["name"]); // sss sss
+	console.log(foo.age + "\t" + foo["age"]);	// 20 20
+	console.log(foo[0] + "\t" + foo[1]);	// unde unde
+	console.log(foo.addresss)	// unde
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

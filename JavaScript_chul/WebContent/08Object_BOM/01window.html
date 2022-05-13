@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var child;
+	function yyy() {
+		child = window.open("01child.html", "childName",
+				"width=200, height=300");
+	}
+	function yyy2() {
+		child.close();
+	}
+	function yyy3() {
+		window.close();
+	}
+</script>
+</head>
+<body>
+	여기는 부모창입니다.
+	<br>
+	<button onclick="yyy()">자식창 생성</button>
+	<!-- 이벤트 처리 : 특정 이벤트 발생, 동작할 함수 호출 -->
+	<button onclick="yyy2()">자식창 닫기</button>
+	<button onclick="yyy3()">창닫기</button>
+</body>
+</html>

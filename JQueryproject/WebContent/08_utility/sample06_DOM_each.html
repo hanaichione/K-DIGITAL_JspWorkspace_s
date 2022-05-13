@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function() {
+		console.log($("li").get(0).innerText);	// tag > javascript코드로 접근
+		console.log($("li").eq(0));		// fn
+		
+		var result = 0;
+		$.each($("li"), function(i, elt) {
+			result += parseInt(elt.innerText);
+		})
+		console.log(result);
+		$("#result").text(result);
+	})
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>100</li>
+		<li>200</li>
+		<li>300</li>
+		<li>400</li>
+	</ul>
+	<span id="result"></span>
+
+</body>
+</html>

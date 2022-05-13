@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var count=10;
+    function boolTest(){
+        console.log("'123'||0 = "+('123'||0) ); //논리값이 아닌 데이터의 논리연산가능 우객체가 참이므로 뒤 검사를 하지 않고
+        // 123 리턴  
+        console.log("'123'&& 0 = "+('123'&&0) );
+        console.log("false&& 0 = "+(false&&0) );
+        console.log("true&& 0 = "+(true&&0) );
+
+    }
+    function f(){
+        console.log("f count"+count);
+        console.log("f test"+test);
+        var test= "aaaa";
+        console.log("f test"+test);
+
+    }
+    function typeCheck(){
+        var w =100;
+        var w2="100";
+        var undi;
+        if(w == w2){ //형변환
+            console.log("같음==");
+        }
+        if(w === w2){ //형변환없음
+            console.log("같음==");
+        }else{
+            console.log("다름 =====");
+        }
+        if(undi === undefined){ // null을 빼고 undefined만 엄격검사
+            console.log("undefined");
+        }
+
+    }
+   function outputNumber(){
+
+    for (var i =0; i< count; i++){
+            console.log(test); // 변수가 함수의 맨 위에서 자동 선언되게 된다.
+           var test="test";  //변수는 함수가 scope 임
+           console.log(i);
+       }
+    /*  
+    (function(){
+       for (var i =0; i< count; i++){
+           var test="test";
+           console.log(i);
+       }
+    })();  */
+       console.log("out"+i);
+       console.log(test);
+   }
+   boolTest();
+  // typeCheck();
+//outputNumber();
+//f();
+</script>
+</head>
+<body>
+
+</body>
+</html>

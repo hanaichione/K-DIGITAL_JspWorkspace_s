@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function () {
+		document.querySelector("#vi").addEventListener("click", setView);	// false 안 적어줘도 문제 없음
+		document.querySelector("#unvi").addEventListener("click", unsetView, false);
+	}
+	function setView() {
+		var img = document.querySelector("#detail h3");
+		img.style.display = "block";
+		// img.style.display = "inline";
+	}
+	function unsetView() {
+		var img = document.querySelector("#detail h3");	// detail h3 : 자손 선택 (detail>h1 : 자식)
+		// img.style.visibility = "hidden";
+		img.style.display = "none";
+	}
+</script>
+</head>
+<body>
+	<input type="button" id="vi" value="보이기">
+	<br>
+	<input type="button" id="unvi" value="감추기">
+	<br>
+
+	<div id="detail">
+		<h1>아래 내용이 숨겨집니다</h1>
+
+		<h3>
+
+			<font color="red">다음과 같은 내용이 숨겨지게 됩니다. </font>
+
+		</h3>
+</body>
+</html>

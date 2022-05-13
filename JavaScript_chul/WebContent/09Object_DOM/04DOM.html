@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function xxx() {
+	var f = document.getElementById("fruits");
+	console.log(f.value);
+}
+function xxx2(s) {
+	console.log(s);
+	console.log(s.value);
+}
+function xxx3(s) {
+	console.log(s);
+}
+</script>
+</head>
+<body>
+	<select id="fruits" onchange="xxx()">
+		<option value="사과">사과</option>
+		<option value="바나나">바나나</option>
+		<option value="수박">수박</option>
+		<option value="포도">포도</option>
+	</select>
+	<select id="fruits2" onchange="xxx2(this)"> <!-- this : 이벤트가 발생된 태그(dom) 자체 -->
+		<option value="사과">사과</option>
+		<option value="바나나">바나나</option>
+		<option value="수박">수박</option>
+		<option value="포도">포도</option>
+	</select>
+	<select id="fruits3" onchange="xxx3(this.value)"> <!-- this : 이벤트가 발생된 태그(dom) 자체 -->
+		<option value="사과">사과</option>
+		<option value="바나나">바나나</option>
+		<option value="수박">수박</option>
+		<option value="포도">포도</option>
+	</select>
+</body>
+</html>

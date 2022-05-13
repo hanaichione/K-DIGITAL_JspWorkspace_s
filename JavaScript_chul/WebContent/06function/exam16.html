@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	var aaa = function () {
+		console.log("aaa 호출");
+		return 100;
+	}
+	
+	var xxx1 = aaa;	// aaa 자체가 저장
+	var xxx2 = aaa();	// return값 저장 (100)
+	
+	console.log(xxx1());	// aaa 내용 호출
+	console.log(xxx1);	// aaa 함수 자체 호출
+	console.log(xxx2);	// return값 100 출력 
+	
+	function kkk(x) {
+		console.log("kkk 호출", x);	// 함수 자체를 출력
+		x(); // trigger 역할, 익명함수를 실행
+	}
+	var ppp = function () {
+		console.log("ppp 호출")
+	}
+	
+	kkk(ppp);
+	kkk(aaa);
+	
+	function ttt(){
+		console.log("ttt 호출", eee);
+		return eee;
+	}
+	var eee = function () {
+		console.log("eee 호출")
+	}
+	
+	var k = ttt();
+	k();
+</script>
+</head>
+<body>
+
+</body>
+</html>

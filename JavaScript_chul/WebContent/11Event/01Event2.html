@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = init;	// 함수 등록
+	
+	function init() {
+		console.log("모든 html이 모두 DOM으로 생성된 후 실행");
+		
+		document.getElementById("xxx").onclick = function () {
+			console.log("clicked");
+		}
+		
+		document.getElementById("xxx").onmouseover = function () {
+			console.log("onmouseover");
+		}
+		document.getElementById("xxx").onmouseout = function () {
+			console.log("onmouseout");
+		}
+		document.getElementById("userid").onkeyup = function () {
+			console.log(this.value);
+			/* console.log(document.getElementById("userid").value); */
+		}
+		document.getElementById("xyz").onclick = function() {
+			console.log(event.screenX, event.screenY); // 매개변수 없이 사용 가능
+		}
+	}
+</script>
+</head>
+<body> <!-- 처리할 이벤트, 이벤트 핸들러(함수) 등록 : 인라인 방식 -->
+	<button id="xxx">클릭</button>
+	<input type="text" name="userid" id="userid">
+	<button id="xyz">이벤트 정보</button>
+</body>
+</html>

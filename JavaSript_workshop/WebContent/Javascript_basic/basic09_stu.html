@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	do {
+		var point = prompt("정수값을 입력하시오.");
+	} while (point < 1 && point > 100);
+   
+	var grade = "";
+	
+   if (point >= 90) {
+	grade = "1등급";
+} else if (point >= 80){
+	grade = "2등급";
+} else if (point >= 70){
+	grade = "3등급";
+} else grade = "4등급";
+   
+	console.log("입력값:", point);
+	console.log("등급:", grade);
+    
+</script>
+</head>
+<body>
+
+</body>
+</html>

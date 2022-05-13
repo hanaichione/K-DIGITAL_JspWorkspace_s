@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	var aaa = function() {
+		console.log("aaa 호출");
+	}
+	aaa();	// unde unde
+
+	var bbb = function(n) {
+		console.log("bbb 호출", n);
+	}
+	bbb(100);
+	
+	var ccc = function() {
+		console.log("ccc 호출");
+		return 100;
+	}
+	var x = ccc();
+	console.log(x);
+	
+	var ddd = function(n) {
+		console.log("ddd 호출", n);
+		return 100;
+	}
+	var x2 = ddd;
+	console.log(x2);
+</script>
+</head>
+<body>
+
+</body>
+</html>

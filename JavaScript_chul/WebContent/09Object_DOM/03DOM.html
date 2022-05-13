@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var i = 0;
+	var arr = [ "a.jpg", "b.jpg", "c.jpg" ];
+
+	function before() {
+		var img = document.getElementById("flag");
+		--i;
+		if (i < 0) {
+			i = 2
+		}
+		img.src = "../image/" + arr[i];
+	}
+	
+	function next() {
+		var img = document.getElementById("flag");
+		++i;
+		if (i > 2) {
+			i = 0
+		}
+		img.src = "../image/" + arr[i];
+	}
+	/* var i = 0;
+	function next() {
+		var img = document.getElementById("flag");
+		while (i>=0 && i<3) {
+			img.src = "../image/" + arr[i];
+			i++;
+		}
+	}
+	function before() {
+		var img = document.getElementById("flag");
+		while (i<3 && i>=0) {
+			img.src = "../image/" + arr[i];
+			i--;
+		}
+	} */
+	
+</script>
+</head>
+<body>
+	<img id="flag" src="../image/a.jpg" width="200" height="200">
+	<br>
+	<button onclick="before()">전</button>
+	<button onclick="next()">후</button>
+</body>
+</html>

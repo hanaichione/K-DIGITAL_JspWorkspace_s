@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function size(s) {
+		var str = s.value;
+		var str_size = str.length;
+		document.getElementById("result").innerText = str_size;
+	}
+  
+
+
+</script>
+</head>
+<body>
+글자수 세기<br>
+<textarea rows="10" cols="10" onkeyup="size(this)"></textarea><br>
+입력문자수:<span id="result"></span>
+</body>
+</html>

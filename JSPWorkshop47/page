@@ -1,0 +1,11 @@
+페이지 나누기 구현
+전체레코드 갯수를 알아야 함(totalcount)
+한페이지당 보여질 레코드 개수(perpage)
+	totalcount = 13개
+	perpage = 2개
+	필요한 페이지 = 13/2 +1 = 7개
+
+현재 페이지 번호(curpage)
+1인 경우 => 시작 idx = (1-1)*perpage, idx 0에서 perpage만큼(perpage 2일 때 : 0, 1)
+2인 경우 => 시작 idx = (2-1)*perpage(perpage 2일 때 : 2, 3)
+3인 경우 => 시작 idx = (3-1)*perpage(perpage 2일 때 : 4, 5)

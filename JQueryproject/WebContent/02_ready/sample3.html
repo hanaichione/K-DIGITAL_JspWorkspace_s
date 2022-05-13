@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function() {	// 대소문자 구분 is not defined 에러
+	console.log("ready1");
+	}	// end func
+);	// end doc
+
+$(document).ready(function() {
+	console.log("ready2");
+	}	// end func
+);	// end doc
+
+$(function() {	// $(document).ready
+	console.log("ready3");
+	}	// end func
+)	// end doc, ; 안 해도 됨
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

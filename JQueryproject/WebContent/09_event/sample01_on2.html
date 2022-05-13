@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#a").on("click mouseover", function() {
+			console.log("ok button");
+			console.log("ok button", event.screenX, event.screenY);
+			$("#result").text(event.screenX);
+		})
+		$("#b").on( "click", function() {
+			$("#a").off("click mouseover"); // 이벤트 제거
+		})
+	})
+</script>
+</head>
+<body>
+	<button id="a">ok</button>
+	<button id="b">cancel</button>
+	<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function () {
+		$("#a").on("click", setData);
+	})
+	
+	function setData() {
+		$.ajax({
+			type:"post",
+			url:"sample01_text2.jsp",
+			data:{
+				v1: $("#v1").val(),
+				v2: $("#v2").val()
+			},
+			dataType: "text",
+			success: function (data, status, xhr) {
+				console.log("success", data);
+				$("#result").text(data);
+			},
+			error: function (xhr, status, error) {
+				$("#result").append("데이터 받지 못함");
+				$("#result").append(status);
+			}// end error
+
+		})// ajax
+	}//setData
+</script>
+</head>
+<body>
+	<button id="a">ajax요청</button>
+	<br> v1:
+	<input type="text" name="v1" id="v1">
+	<br> v2:
+	<input type="text" name="v2" id="v2">
+	<br>
+	<div id="result"></div>
+
+</body>
+</html>

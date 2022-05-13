@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var jdata = $("#a");
+	console.log(jdata);	// S.fn.init [p#a]
+	console.log(jdata.text());	// Hello
+	
+	var data = document.getElementById("a");
+	console.log(data);	// a의 태그 출력
+	console.log(data.innerText);	// Hello
+	console.log($(data).text());	// jquery로 변경, Hello
+	
+	$("#a2").css("color", "red");	// Hello2 빨간색으로 바뀜
+	console.log($("#a2").innerText);	// undefined
+	console.log("text() : ", $("#a2").text());	// text() : Hello2
+	
+	$("#a").text("=====================");	// 브라우저에 ===================== 출력됨
+	$("#a").innerText="aaaaaa";				// 변경 안 됨
+})
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="a">Hello</p>
+	<p id="a2">Hello2</p>
+	<div id="b">World</div>
+	<span id="c">test</span>
+
+</body>
+</html>

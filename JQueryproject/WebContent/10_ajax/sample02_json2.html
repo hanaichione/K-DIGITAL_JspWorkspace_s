@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#a").on("click", getData);
+	})
+
+	/* function getData() {
+		$.ajax({
+			type : "get",
+			url : "sample02_json2.jsp",
+			dataType : "json",
+			success : function(data, status, xhr) {
+				$.each(data, function(i, data) {
+					$("#result")
+							.append(data.username + ":" + data.age + "<br>");
+				});
+				$("#result").append("<hr>");
+				for (var i = 0; i < data.length; i++) {
+					$("#result").append(
+							data[i].username + ":" + data[i].age + "<br>");
+				}
+			},
+			error : function(xhr, status, error) {
+				$("#result").append(error + "<br>");
+				$("#result").append(status + "<br>");
+			}
+		})
+	} */
+	
+	function getData() {
+		$.ajax({
+			type:"get",
+			url: "sample02_json2.jsp",
+			dataType:"json",
+			success: function (data, status, xhr) {
+				$.each(data, function (idx, data) {//주의 
+					$("#result").append(data.username+":"+data.age+"<br>");
+				});
+				$("#result").append("<hr>");
+				for (var i = 0; i < data.length; i++) {
+					$("#result").append(data[i].username+":"+data[i].age+"<br>");
+				}				
+			},
+			error: function (xhr, status, error) {
+				$("#result").append(error+"<br>");
+				$("#result").append(status+"<br>");
+			}				
+		});//end ajax
+	}
+
+</script>
+</head>
+<body>
+	<button id="a">ajax요청</button>
+	<div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	function a(n) {
+		console.log("a 호출");
+		n();
+	}
+	function b() {
+		console.log("b 호출");
+	}
+	function c() {
+		console.log("c 호출");
+	}
+	a(b);
+	a(c);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

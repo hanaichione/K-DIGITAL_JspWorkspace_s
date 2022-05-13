@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function calc(op) {
+		var v1 = document.getElementById("v1").value;
+		var v2 = document.getElementById("v2").value;
+		var result = document.getElementById("result");
+		
+		switch (op) {
+		case '+':
+			result.value = parseInt(v1) + parseInt(v2)
+			break;
+		case '-':
+			result.value = parseInt(v1) - parseInt(v2)
+			
+			break;
+		case '*':
+			result.value = parseInt(v1) * parseInt(v2)
+			break;
+		case '/':
+			result.value = parseInt(v1) / parseInt(v2)
+			break;
+		}
+	}
+	
+</script>
+
+</head>
+<body>
+	값1
+	<input type="text" name="val1" id="v1">
+	<br> 값2
+	<input type="text" name="val2" id="v2">
+	<br>
+	<button onclick="calc('+')">+</button>
+	<button onclick="calc('-')">-</button>
+	<button onclick="calc('*)">*</button>
+	<button onclick="calc('/')">/</button>
+	결과값
+	<input type="text" name="resultval" id="result">
+</body>
+</html>

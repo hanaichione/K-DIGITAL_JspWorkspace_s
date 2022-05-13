@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var count = 0;
+	var arr = [];
+	var n = 0;
+	var sum = 0;
+	function multi() {
+		var mesg = "";
+		count++;
+		n += 3;
+		sum += n;
+		
+		arr.push(n);
+
+		mesg += "클릭한 수: " + count + "<br>";
+		mesg += "합계: " + sum;
+		document.getElementById("result").innerHTML = arr+"<br>"+mesg;
+	}
+</script>
+</head>
+<body>
+	<h3>배수 출력</h3>
+	<button onclick="multi()">3의 배수</button>
+	<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function string() {
+		var arr = document.getElementById("v1").value;
+		var word = arr.split(" ");
+		var mesg = "";
+		
+		mesg += "단어수:" + word.length + "<br>";
+		var sum = 0;
+		for (var i = 0; i < word.length; i++) {
+			sum += word[i].length;
+		}
+		mesg += "글자수:" + sum;
+		
+		document.getElementById("result").innerHTML = mesg;
+	}
+  
+</script>
+</head>
+<body>
+<h3>문자열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="How are you? fine thank you">
+<button onclick="string()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

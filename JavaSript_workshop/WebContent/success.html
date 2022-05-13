@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" maxlength="1" id="win1" onkeyup="youWin(this)">
+	<input type="text" maxlength="1" id="win2" onkeyup="youWin(this)">
+	<script type="text/javascript">
+		function check(s) {
+			if (s.value === "1") {
+				return true;
+			}
+		}
+		function check2(s) {
+			if (s.value === "2") {
+				return true;
+			}
+		}
+		function youWin() {
+			var win1 = document.getElementById("win1");
+			var win2 = document.getElementById("win2");
+			if (check(win1) && check2(win2)) {
+				prompt("YOU wIN! 이름을 입력하세요.");
+			}
+		}
+	</script>
+</body>
+</html>

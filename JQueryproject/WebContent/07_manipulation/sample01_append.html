@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+$(function () {
+	$("button").on("click", function () {
+//		$(".my").append("<span>장군</span>");		// 이순신장군장군장군
+//		$("<span>장군</span>").appendTo($(".my"));	// 이순신장군장군장군
+		$(".my").append($("h1"));
+	})
+})
+</script>
+</head>
+<body>
+<h1>영웅들</h1>
+	<div>
+		<div class="my">홍길동</div>
+		<div class="my">이순신</div>
+	</div>
+	<button>ok</button>
+
+</body>
+</html>

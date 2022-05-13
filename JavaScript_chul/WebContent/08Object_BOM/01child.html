@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function xxx() {
+		window.close();
+	}
+	function xxx2() {
+		opener.close();	// 나를 연 창 닫기
+	}
+</script>
+</head>
+<body>
+	<button onclick="xxx()">창닫기</button>
+	<button onclick="xxx2()">부모창 닫기</button>
+</body>
+</html>

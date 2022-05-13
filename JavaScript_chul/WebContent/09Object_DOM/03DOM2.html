@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function change(v) {
+		var arr = ["a.jpg","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg"];
+		var img = document.getElementsByTagName("img");
+		var selectArr="";
+		if (v==1) {
+			selectArr=arr.slice(0,3);
+		}
+		if (v==2) {
+			selectArr=arr.slice(3,6);
+		}
+		if (v==3) {
+			selectArr=arr.slice(6, 9);
+		}
+		for(var x in img){
+			img[x].src="../image/"+selectArr[x];
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<img id="flag" src="../image/a.jpg" width="200" height="200">
+	<img id="flag" src="../image/b.jpg" width="200" height="200">
+	<img id="flag" src="../image/c.jpg" width="200" height="200"><br>
+	<a href="javascript:change(1)">1</a>
+	<a href="javascript:change(2)">2</a>
+	<a href="javascript:change(3)">3</a>
+</body>
+</html>

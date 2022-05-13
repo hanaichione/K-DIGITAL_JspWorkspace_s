@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+//attr(속성명), attr("속성명", "값")
+$(function () {
+	$("button").on("click", function () {
+		var img = $("img");
+		var data = $("img").attr("src");
+		console.log(data);
+		console.log(img);
+		img.attr("src", "b.jpg");
+	})
+})
+</script>
+</head>
+<body>
+	<img src="a.jpg" width="100" height="100">
+	<button>OK</button>
+</body>
+</html>

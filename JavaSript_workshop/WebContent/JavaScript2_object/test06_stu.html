@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    function data() {
+    	var result = "";
+		var str = document.getElementById("v1").value;
+		var arr = str.split(",");
+		// 오름차순 정렬
+		var sort = arr.sort(function(a,b){return a - b;});
+		console.log(sort);
+		
+		// 합계
+		var sum = 0;
+		for (var i = 0; i < sort.length; i++) {
+			sum += parseInt(sort[i]);
+		}
+		result += "합계:" + sum + "<br>";
+		
+		// 평균
+		var avg = sum/sort.length;
+		result += "평균:" + avg.toFixed(2) + "<br>";
+		
+		// 중앙값
+		var index = (sort.length)/2;
+		var median = sort[index];
+		if(sort.length%2==0){
+			var index2 = sort.length/2 - 1;
+			var index3 = sort.length/2;
+			console.log(sort[index2], sort[index3]);
+			median = (parseInt(sort[index2]) + parseInt(sort[index3])) / 2;
+			
+		}
+		result += "중앙값:" + median;
+		
+		document.getElementById("result").innerHTML = result;
+	}
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+값:<input type="text" name="v1" id="v1" value="1,5,10,9,3,7,23,4,6,8">
+<button onclick="data()">데이터 분석</button><br>
+<div id="result"></div>
+</body>
+</html>

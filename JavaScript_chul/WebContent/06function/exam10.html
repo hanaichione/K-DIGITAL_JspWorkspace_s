@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	aaa();	// 선언 전 호출 가능
+	function aaa() {
+		console.log("aaa 함수");
+	}
+	console.log(aaa); // 함수 자체가 호출됨
+	var aaa = 20;	
+	aaa();	// 함수가 그냥 number로 변경되어 aaa() 호출이 안 됨
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

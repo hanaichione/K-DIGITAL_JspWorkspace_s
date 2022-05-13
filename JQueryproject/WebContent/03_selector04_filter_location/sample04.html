@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function() {
+		var x = $("li:eq(2)");
+		console.log("li:eq(2)", x);
+		x.css("color","red");
+		
+		var x = $("li:gt(2)");
+		console.log("li:gt(2)", x);
+		x.css("color", "blue");	// A4부터 시작
+		
+		var x = $("li:lt(5)");
+		console.log("li:lt(5)", x);
+		x.css("font-size", "40px");	// b까지 커짐
+	})
+</script>
+</head>
+<body>
+	<div>
+		<h1>JQuery</h1>
+	</div>
+
+	<div>
+		<ul>
+			<li>A</li>
+			<li>A2</li>
+			<li>A3</li>
+			<li>A4</li>
+		</ul>
+		<ul>
+			<li>b</li>
+			<li>b2</li>
+			<li>b3</li>
+			<li>b4</li>
+		</ul>
+		<div>
+			<p>Hello</p>
+		</div>
+
+	</div>
+
+</body>
+</html>

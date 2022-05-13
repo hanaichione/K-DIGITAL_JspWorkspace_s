@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var arr = [];
+	
+	$(document).ready(function() {
+		$("button").on("click", function () {
+			arr.push($("#v1").val());
+			list();
+		})
+	});
+	
+	function list() {
+		var result = $("#result");
+		var mesg = "";
+		
+		$.each(arr, function (idx , ele) {
+			//mesg += arr[idx] + "<br>";
+			mesg += ele + "<br>";
+		})
+		result.html(mesg);
+	}
+</script>
+</head>
+<body>
+	값:
+	<input type="search" name="v1" id="v1">
+	<button>저장</button>
+	<br>
+
+	<div id="result"></div>
+
+</body>
+</html>

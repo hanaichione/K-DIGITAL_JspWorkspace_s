@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* function sum() {
+		var quantity = document.getElementById("quantity").value;
+		var price = document.getElementById("price").value;
+		document.getElementById("totalPrice").value = parseInt(quantity) * parseInt(price);
+	} */
+ 	function sum(s, v) {
+		var result = document.getElementById("totalPrice");
+		var price = document.getElementById("price").value;
+		var quantity = v;
+		result.value = parseInt(quantity) * parseInt(price);
+	}
+</script>
+</head>
+<body>
+	가격
+	<input id="price" type="text" name="price">
+	<br> 수량
+	<select id="quantity" onchange="sum(this, this.value)">
+		<option value="10">10</option>
+		<option value="20">20</option>
+		<option value="30">30</option>
+		<option value="40">40</option>
+	</select> 총가격
+	<input id="totalPrice" type="text" name="totalPrice">
+
+
+</body>
+</html>

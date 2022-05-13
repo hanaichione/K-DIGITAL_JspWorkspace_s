@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".myClass").css("color", "red");
+		console.log("첫번째 myClass>>", $(".myClass"));
+		console.log("첫번째 myClass>>", $(".myClass").first().text());	// 첫번째
+		console.log("첫번째 myClass>>", $(".myClass")[0].innerText);	// 첫번째, 배열로 접근시 javascript로 작성
+		console.log("세번째 myClass>>", $(".myClass").last().text());	// 마지막
+	})
+</script>
+</head>
+<body>
+	<p class="notMe">div class="notMe"</p>
+	<p class="myClass">p class="myClass1"</p>
+	<div class="myClass">div class="myClass2"</div>
+	<div class="myClass">div class="myClass3"</div>
+
+</body>
+</html>

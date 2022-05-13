@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var myCars=["BMW" , "Benz" , "티코"];
+/* for (var i = 0; i < myCars.length; i++) {
+	console.log(myCars[i]);
+}
+
+for ( var num4 in myCars) {	//index
+	console.log("myCars "+myCars[num4]);
+} */
+/* for (var i of myCars) {	//data
+	console.log(i)
+} */
+
+for ( var i in myCars) {
+	console.log("test>>>" + myCars[i]);
+}
+
+var person = {"name":"홍길동", "age":20, "address":"서울"};
+
+for ( var i in person) {
+	console.log("person 정보 : " + i + ":" + person[i]);
+}
+
+/* for ( var i of person) {	// error 오브젝트는 in 써야 함...
+	console.log("person 정보 : " + i);
+} */
+</script>
+</head>
+<body>
+
+</body>
+</html>

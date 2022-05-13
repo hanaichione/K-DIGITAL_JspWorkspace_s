@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	console.log("1");
+
+	function sum(n, n2) {
+		return n+n2;
+	}
+	var result = sum(10,20);
+	console.log(result);
+	/////// 함수 자체를 변수에 저장할 수 있음 ///////
+	var y = sum;
+	var result2 = y(1,2);
+	console.log(result2);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

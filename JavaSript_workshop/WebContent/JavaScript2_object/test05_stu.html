@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr;
+	
+	function generate() {
+		arr = [];
+		console.log(arr);
+	}
+	
+	function delete_() {
+		arr = [];
+		print(arr);
+	}
+	
+	function store() {
+		arr.push(document.getElementById("v1").value);
+		document.getElementById("v1").value = null;
+		console.log(arr);
+	}
+	
+	function print() {
+		var mesg = "";
+		for (var i = 0; i < arr.length; i++) {
+			mesg += arr[i] + "<br>";
+		}
+		document.getElementById("result").innerHTML = mesg;
+	}
+</script>
+</head>
+<body>
+	<h3>배열 관리</h3>
+	<button onclick="generate()">배열생성</button>
+	<button onclick="delete_()">배열삭제</button>
+	<br> 값:
+	<input type="text" name="v1" id="v1">
+	<button onclick="store()">배열에 값 저장</button>
+	<br>
+	<button onclick="print()">배열에 값 출력</button>
+	<br>
+	<div id="result"></div>
+</body>
+</html>

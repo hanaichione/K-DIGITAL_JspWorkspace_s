@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+  function allsel(s) {
+	checkarr = document.getElementsByClassName("lang");
+	for (var i = 0; i < checkarr.length; i++) {
+			checkarr[i].checked = s.checked;
+	}
+}
+
+</script>
+</head>
+<body>
+전체선택
+<input type="checkbox" name="all" onclick="allsel(this)"><br>
+<input type="checkbox" name="java" class="lang">java<br>
+<input type="checkbox" name="sql" class="lang">sql<br>
+<input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+</html>

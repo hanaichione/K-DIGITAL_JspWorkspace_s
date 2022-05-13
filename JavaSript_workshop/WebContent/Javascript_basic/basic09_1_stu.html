@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+    var num = prompt("1.면접 점수값을 입력하시오.");
+    var num2 = prompt("2.영어 점수값을 입력하시오.");
+    console.log("면접점수 값:"+num);
+    console.log("영어점수 값:"+num2);
+    
+    var avg = (parseInt(num)+parseInt(num2)) / 2
+    console.log("평균:"+avg);
+    
+    var result="불합격";
+    if (avg >= 80) {
+    	result = "합격"
+    	console.log("합격여부: "+result);
+	}
+    
+    
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

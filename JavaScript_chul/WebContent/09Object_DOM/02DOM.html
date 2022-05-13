@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx() {
+		console.log("body onload 후 실행");
+		var id = document.getElementById("userid");
+		id.value="test";
+	}
+</script>
+</head>
+<body onload="xxx()">
+아이디<input type="text" name="userid" id="userid" value="abc">
+</body>
+</html>

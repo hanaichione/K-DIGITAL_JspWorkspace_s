@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function() {
+		// parent(parents 아님) 바로 위 부모 선택 가능, 배열로 반환
+		$("div").next().css("color", "red");
+
+		$("div").next(".my").css("font-size", "40px");
+	})
+</script>
+</head>
+<body>
+	<div>A</div>
+	<p>A2</p>
+	<div>B</div>
+	<p class="my">B2</p>
+	<div>C</div>
+	<div class="my">C2</div>
+	<p>C3</p>
+
+</body>
+</html>

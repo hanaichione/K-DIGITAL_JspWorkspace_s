@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	var count = prompt("정수값을 입력하시오");
+	
+	function printData(count) {
+		for (var i = 1; i <= count; i++) {
+			console.log(i);
+		}
+	}
+	/////// 함수 자체를 변수에 저장할 수 있음 ///////
+	var test=printData;
+	test(count);
+	
+	console.log("===========================");
+	printData(count);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

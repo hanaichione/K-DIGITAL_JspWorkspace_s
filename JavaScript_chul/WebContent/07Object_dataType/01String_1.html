@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//문자열 생성방법
+//가. new 이용
+var s = new String("HelLo");
+//나. 리터럴 이용
+var s2 = "HelLo";
+console.log("문자열 길이", s.length);
+console.log("특정문자구하기", s.charAt(0));
+var ss = s.concat(" world");
+
+console.log(ss);
+
+var ss2 = s.concat(" aa" , "bbb");
+console.log("문자열 연결2", ss2);
+console.log("특정문자위치", ss.indexOf('e')); //1
+console.log("부분열", s.substring(1,3)); //el
+console.log("부분열", s.substr(1,3)); //elL(1번부터 3개 뽑음)
+console.log("대문자", s.toUpperCase()); 
+console.log("소문자", s.toLowerCase());
+
+// split
+var xx = "Hello world happy";
+var arr = xx.split(" ");	// arr는 string타입의 배열
+for ( var i in arr) {
+	console.log(arr[i]);
+}
+
+var xx2 = "Hello/world/happy/xxx/yyy";
+var arr2 = xx2.split("/",3);	// 3개까지만 저장
+for ( var i in arr2) {
+	console.log(arr2[i]);
+}
+
+// replace
+var kk = "Hello";
+console.log("replace", kk.replace("H", "A"));	// 앞에걸 뒤에걸로 변경
+var kk2 = "    world    ";
+console.log(kk2.length, kk2.trim().length);
+</script>
+</head>
+<body>
+
+</body>
+</html>

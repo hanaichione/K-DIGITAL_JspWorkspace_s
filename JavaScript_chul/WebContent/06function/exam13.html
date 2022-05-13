@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function aaa() {
+		console.log("aaa 함수");
+	}
+	function bbb() {
+		console.log("bbb 함수");
+		return aaa;	// aaa 함수 리턴
+	}
+	var test = bbb(); 
+	test();
+	function ccc() {
+		return function(n1,n2){	// 익명함수 리턴
+			return n1+n2;
+		}
+	}
+	
+	// 리턴값에 함수 사용
+	var x = bbb();	// x = aaa;
+	
+	console.log(x);	// aaa 함수 출력
+	x();	// aaa함수 호출
+	
+	var y = ccc();	// 익명함수 받음
+	console.log(y);	// 익명함수 호출
+	
+	console.log(y(10,20));	// 익명함수에 인자 줘서 호출
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

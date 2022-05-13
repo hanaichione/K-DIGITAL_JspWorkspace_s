@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	var s = [ "A", "B", "C", "D" ];
+	var arr = $.grep(s, function(data, idx) {
+		return data == "B";
+	}, true); //:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+	//결과를 리턴함
+	console.log(arr);
+
+	var arr2 = $.grep(s, function(data, idx) {
+		return data == "B";
+	}, false); //:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+	//결과를 리턴함
+	console.log(arr2);
+
+	var arr3 = $.grep(s, function(data, idx) {
+		return data == "B";
+	}); //:inverter false인 경우 검색 결과가 true인것만 리턴 함, true로 설정시 조건식이 true인 것을 제외한 
+	//결과를 리턴함
+	console.log(arr3); // arr2와 동일(default가 false임)
+</script>
+</head>
+<body>
+
+</body>
+</html>

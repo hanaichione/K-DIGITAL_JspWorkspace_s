@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function () {
+		var chk = document.getElementById("chk");
+		chk.addEventListener("click", checking, false)
+		
+		var addr2 = document.getElementById("address2");
+		addr2.addEventListener("keyup", function () {
+			document.querySelector("#test").innerText = this.value;
+		}, false);
+	}
+	function checking() {
+		var add = document.getElementById("address").value;
+		console.log(add);
+		if(this.checked){
+			document.getElementById("address2").value = add;
+		}
+	}
+	
+	
+</script>
+</head>
+<body>
+회원주소
+<input type="text" name="address" id="address" value="공주~~~~"><br>
+배송지가 같으면 다음을 체크하세요
+<input type="checkbox" name="chk" id="chk" on><br>
+배송지 주소
+<input type="text" name="address2" id="address2" 
+><br>
+<span id="test"></span>
+
+</body>
+</html>

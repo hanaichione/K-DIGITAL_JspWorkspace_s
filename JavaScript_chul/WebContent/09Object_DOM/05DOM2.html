@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx() {
+		document.getElementById("xx").value = "test";
+		console.log(document.getElementById("x").innerText); // 홍길동 나옴
+		document.getElementById("x").innerText = "test";
+		console.log(document.getElementById("y").innerText);	// 문자만
+		console.log(document.getElementById("y").innerHTML);	// 태그 포함
+		document.getElementById("y").innerHTML="<h6>이순신</h6>";
+		console.log(document.getElementById("z").innerText);	// 유관순
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="xx"><br>
+	<div id="x">홍길동</div>
+	<div id="y">
+		<h1>이순신</h1>
+	</div>
+	<p id="z">유관순</p>
+	<button onclick="xxx()">확인</button>
+</body>
+</html>

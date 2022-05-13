@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+이름<input type="text" name="username" id="username"><br>
+나이<input type="text" name="age" id="age"><br>
+주소<input type="text" name="address" id="address"><br>
+<button id="save">등록</button>
+<button id="delete" >삭제</button>
+<button id="update" >수정</button>
+<button id="reset" >리셋</button>
+<span id="list"></span>
+
+<script type="text/javascript">
+
+   var personList = [];
+   var delKey = 0;
+
+   function add(){
+	   var n = document.getElementById("username").value;
+	   var a = document.getElementById("age").value;
+	   var ad = document.getElementById("address").value;
+	   var person = {'username':n,'age':a,'address':ad};
+	   personList.push(person);
+	   list();
+   }
+   function del(){  
+	  personList.splice( delKey, 1);
+	  list();
+	   
+   }
+   function list(){
+	   var data = '';
+	   for( var i = 0 ; i < personList.length; i++){
+		   var username = personList[i].username;
+		   var age = personList[i].age;
+		   var address = personList[i].address;
+		   data +="<div id='"+i+"'>"+username+"&nbsp;"+age+"&nbsp;"+address+"</div>";
+	   }
+	   document.getElementById("list").innerHTML = data;
+    }
+   function div(e){
+	   var xx = e.target;
+	   var i = xx.getAttribute("id");
+	   delKey = i;
+	   var p = personList[i];
+	   document.getElementById("username").value = personList[i]["username"];
+	   document.getElementById("age").value = personList[i]["age"];
+	   document.getElementById("address").value = personList[i]["address"];
+
+	   e.stopPropagation();
+   }
+   function reset(){
+	   document.getElementById("username").value = "";
+	   document.getElementById("age").value = "";
+	   document.getElementById("address").value = "";
+   }
+   function update(){
+	   var username = document.getElementById("username").value;
+	   var age = document.getElementById("age").value;
+	   var address = document.getElementById("address").value;
+	   personList.splice(delKey,1 , {'username':username,'age':age,'address':address})
+	   list();
+   }
+
+   document.getElementById("save").addEventListener( "click" , add, false);
+   document.getElementById("delete").addEventListener( "click" , del, false);
+   document.getElementById("list").addEventListener( "click" , div, false);
+   document.getElementById("reset").addEventListener( "click" , reset, false);
+   document.getElementById("update").addEventListener( "click" , update, false);
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function() {
+		// p태그 바로 뒤 a태그 반환
+		$("p+a").css("color", "red");	// daum, test
+		// p태그 바로 뒤 모든 a태그
+		$("p~a").css("font-size", "40px");	// daum, naver, test
+	})
+</script>
+</head>
+<body>
+	<div>
+		<p>p</p>
+		<a href="">daum</a> 
+		<a href="">naver</a>
+		<p>p</p>
+		<a href="">test</a>
+		<p>
+			<a href="">Google</a>
+		</p>
+	</div>
+</body>
+</html>

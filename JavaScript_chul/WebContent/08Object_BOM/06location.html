@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log(location.origin);
+	console.log(location.pathname);
+	console.log(location.hostname);
+	console.log(location.host);
+	console.log(location.protocol);
+	console.log(location.port);
+
+	function xxx() {
+		location.reload();
+	}
+
+	function yyy() {
+		console.log("====================="); // 페이지가 너무 빨리 전환돼서 안 보임
+		location.href = "target.html";
+	}
+
+	function target2() {
+		document.getElementById("myForm").action = "target2.html"; // myForm 찾아가서 action값을 바꿔주고 있음
+	}
+	
+	function target3() {
+		location.href="target2.html";
+	}
+
+	function test() { // html태그들이 다 만들어진 후에 호출함 -> 앞 줄에 있지만 실행 순서상 뒤이기 때문에 에러 발생하지 않음
+		var test = document.getElementById("myForm");
+		console.log(".>>>>>", test);
+		console.log(".>>>>>", test.action);
+	}
+	
+	// 함수 바깥에서 dom이 만들어지기 전에 접근, 사용 -> 에러
+	/* var test = document.getElementById("myForm");
+	console.log(".>>>>>", test); */
+	
+</script>
+</head>
+<body>
+	폼의 바깥
+	<br>
+	<button onclick="xxx()">reload</button><br>
+	<br>
+	<a href="javascript:yyy()">target.html</a><br>
+	<br>
+	<button onclick="yyy()">버튼target.html</button><br>
+	<button onclick="location.href='target.html'">location.href='target.html'</button><br>
+	<button onclick="test()">test</button>
+	<hr>
+
+	<form action="target.html" id="myForm">
+		<input type="text" name="userid"><br>
+		<button onclick="target2()">target2.html</button><br> <!-- 폼에서 다른 페이지로 전달시 action을 변경 ** -->
+		<button onclick="location.href='target2.html'">location.href='target2.html'</button><br> <!-- 2로 이동 안 됨 -->
+		<button onclick="target3()">target3()</button><br> <!-- 2로 이동 안 됨 -->
+		<!-- 저장 페이지 바꾸려면 action 변경해야 함 -->
+		<button>전송</button>
+	</form>
+</body>
+</html>

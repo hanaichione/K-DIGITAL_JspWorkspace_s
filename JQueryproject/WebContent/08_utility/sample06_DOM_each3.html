@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function() {
+		
+		$("button").click(xxx)
+		function xxx() {
+			var result = 0;
+			$("li").each(function(i, elt) {
+				// var v = this.innerText;
+				var v = $(this).text();
+				result += parseInt(v);
+			})
+			console.log(result);
+			$("#result").text(result);
+		}	// end xxx
+		
+	})
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li>100</li>
+		<li>200</li>
+		<li>300</li>
+		<li>400</li>
+	</ul>
+	<button>합계</button><br>
+	<span id="result"></span>
+
+</body>
+</html>

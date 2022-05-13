@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx() {
+		alert("xxx submit");
+		e.preventDefault(); /* action 금지 event.prevent() 매개변수로 넘어온 이벤트 동작 정지*/
+		console.log("==========================");
+	}
+	function xxx2() {	// return false 이용하는 방법
+		console.log("2번 호출됨");
+		var id = document.getElementById("userid").value;
+		var passwd = document.getElementById("passwd").value;
+		var result = false;	// 호출곳으로 리턴시킬 boolean 값
+		if(id.length>=3 && passwd.length !=0){
+			result = true;	// 계속 진행 제출
+		} else {
+			result = false;	// 진행 금지
+			alert("xxx2 에러");
+		}
+		return result;
+		return false;
+	}
+	function xxx3() {
+		alert("xxx3 submit");
+		event.preventDefault(); // 이벤트 동작을 정지 ***
+		console.log("===========================");
+	}
+</script>
+</head>
+<body>
+	<form action="test/target.html" onsubmit="xxx()">
+		<!-- <form action="/test/target.html" onsubmit="xxx()">	/로 시작시 root context 주소 : 오류 -->
+		아이디====1<input type="text" name="userid"><br> 비번=====1<input
+			type="text" name="passwd"><br>
+		<button>버튼</button>
+		<input type="submit" value="로그인"> <input type="reset"
+			value="취소"><br>
+	</form>
+	<form action="test/target.html" onsubmit="return xxx2()">
+		<!-- <form action="/test/target.html" onsubmit="xxx()">	/로 시작시 root context 주소 : 오류 -->
+		아이디====2<input type="text" name="userid"><br> 비번=====2<input
+			type="text" name="passwd"><br>
+		<button>버튼</button>
+		<input type="submit" value="로그인"> <input type="reset"
+			value="취소"><br>
+	</form>
+	<form action="test/target.html" onsubmit="xxx3()">
+		<!-- <form action="/test/target.html" onsubmit="xxx()">	/로 시작시 root context 주소 : 오류 -->
+		아이디====3<input type="text" name="userid"><br> 비번=====3<input
+			type="text" name="passwd"><br>
+		<button>버튼</button>
+		<input type="submit" value="로그인"> <input type="reset"
+			value="취소"><br>
+	</form>
+	<form action="target.html" id="test">
+		<!-- 주의  -->
+		아이디======4<input type="text" name="userid"><br>
+		비번========4<input type="text" name="passwd"><br> <input
+			type="submit" value="로그인"><br>
+		<button>버튼</button>
+	</form>
+
+</body>
+</html>

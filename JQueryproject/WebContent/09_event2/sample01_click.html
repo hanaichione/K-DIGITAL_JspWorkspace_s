@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// $("#a").on("click", fn)과 동일
+		$("#a").click(function () {
+			console.log("ok");
+		})
+		$("#b").click(function () {	
+			$("#a").click(); // trigger("click")과 동일
+		})
+	})
+</script>
+</head>
+<body>
+	<button id="a">ok</button>
+	<button id="b">ok-trigger</button>
+	<div id="result"></div>
+
+</body>
+</html>

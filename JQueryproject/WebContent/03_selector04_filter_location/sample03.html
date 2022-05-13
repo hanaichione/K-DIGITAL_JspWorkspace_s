@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function() {
+		// 부모 기준 자식이 하나뿐인 것
+		var x = $("h1:only-child");
+		console.log(x);	
+		
+		// 부모 기준 n번째 자식
+		var x = $(":nth-child(2)");
+		console.log(":nth-child", x);
+		
+		// 부모 기준 배수 번째 자식
+		var x = $(":nth-child(2n)");
+		
+		var x = $("li:nth-child(even)");
+		console.log("li:nth-child(even)>>>", x);
+		// x.css("color", "yellow");	// 노란색으로 변경됨
+		
+		var x = $("li:nth-child(odd)");
+		console.log("li:nth-child(odd)", x);
+		// x.css("color", "blue");
+		
+		var x = $("li:odd");	// 얘는 인덱스가 0부터 시작함...
+		x.css("font-size", "40px");
+		console.log("li:odd>>>", x);
+		
+		var test = $("li");
+		for (var i = 0; i < test.length; i++) {
+			console.log(test[i].innerText);
+		}
+		
+		console.log("============================");
+		for ( var x in test) {
+			console.log(test[x].innerText);	// x는 test의 index
+		}
+		console.log("============================");
+		for (let x of test) {
+			console.log(x.innerText);	// x에는 test 배열에 들어있는 태그가 저장됨
+		}
+		
+	})
+</script>
+</head>
+<body>
+	<div>
+		<h1>eee</h1>
+	</div>
+	<div>
+		<ul>
+			<li>A</li>
+			<li>A2</li>
+			<li>A3</li>
+			<li>A4</li>
+		</ul>
+		<ul>
+			<li>b</li>
+			<li>b2</li>
+			<li>b3</li>
+			<li>b4</li>
+		</ul>
+		<div>
+			<p>Hello</p>
+		</div>
+
+	</div>
+
+</body>
+</html>

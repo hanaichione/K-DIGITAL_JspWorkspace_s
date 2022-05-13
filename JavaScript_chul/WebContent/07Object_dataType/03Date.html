@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var d = new Date();
+	console.log(d);
+	console.log("1970/1/1~현재", d.valueOf());
+	console.log("년도", d.getFullYear());	// 0~11
+	console.log("월", d.getMonth()+1);
+	console.log("일", d.getDate());
+	console.log("시간", d.getHours());
+	console.log("분", d.getMinutes());
+	console.log("초", d.getSeconds());
+	
+	d.setFullYear(2020);
+	d.setMonth(7);
+	d.setDate(20);
+	console.log(d);
+	
+	var dd = new Date();
+	var str;
+	console.log(dd.getDay());
+	
+	switch (dd.getDay()) {//0: 일요일 
+	case 0:
+		  str = "일요일"; break;
+	case 1:
+		  str = "월요일"; break;
+	case 2:
+		  str = "화요일"; break;
+	case 3:
+		  str = "수요일"; break;
+	case 4:
+		  str = "목요일"; break;
+	default:
+		  str = "주말"; break;
+		break;
+	}
+	console.log(str);
+	
+	var now = new Date();
+	var yesDay = new Date(now.setDate(now.getDate()+1));
+	console.log(yesDay);
+</script>
+</head>
+<body>
+
+</body>
+</html>

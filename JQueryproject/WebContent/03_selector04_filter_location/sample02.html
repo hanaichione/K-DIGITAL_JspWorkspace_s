@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function() {
+		var x = $("ul:first-child");
+		console.log("ul:first-child", x);	// ul태그 중 첫번째 자식에 해당하는 A군이 선택
+		
+		var x = $("ul > :first-child");
+		console.log("ul > :first-child", x);	// ul태그의 자식 중 첫번째 자식(A, b)
+		
+		var x = $("li:last-child");
+		console.log("li:last-child", x);
+		console.log(x[0].innerText);	// A4
+		console.log(x[1].innerText);	// b4
+		
+		for ( var i of x) {
+			console.log(i.innerText);
+		}
+	})
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>A</li>
+			<li>A2</li>
+			<li>A3</li>
+			<li>A4</li>
+		</ul>
+		<ul>
+			<li>b</li>
+			<li>b2</li>
+			<li>b3</li>
+			<li>b4</li>
+		</ul>
+		<div>
+			<p>Hello</p>
+		</div>
+
+	</div>
+
+</body>
+</html>

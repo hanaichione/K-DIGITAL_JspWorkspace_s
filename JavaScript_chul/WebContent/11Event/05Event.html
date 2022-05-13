@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function () {
+		document.querySelector("#allCheck")
+			.addEventListener("click", check, false);
+		document.querySelector("#test")
+			.addEventListener("click", view, false);
+	}
+	
+	function check() {
+		// var all = document.querySelector("#allCheck");
+		var fruits = document.querySelectorAll(".fruits");
+		
+		for (var i = 0; i < fruits.length; i++) {
+//			fruits[i].checked = all.checked;
+			fruits[i].checked = this.checked;
+		}
+	}
+	
+	function view() {
+		var fruits = document.querySelectorAll(".fruits:checked");	// 선택된 갯수만큼 뽑아옴
+		var mesg = "";
+		
+		for (var i = 0; i < fruits.length; i++) {
+				mesg += fruits[i].value + "&nbsp&nbsp&nbsp";
+		}
+		document.querySelector("#result").innerHTML = mesg;
+	}
+/* 	function view() {
+		var fruits = document.querySelectorAll(".fruits");
+		var mesg = "";
+		
+		for (var i = 0; i < fruits.length; i++) {
+			if (fruits[i].checked) {
+				mesg += fruits[i].value + "&nbsp&nbsp&nbsp";
+			}
+		}
+		document.querySelector("#result").innerHTML = mesg;
+	} */
+</script>
+</head>
+<body>
+	전체선택
+	<input type="checkbox" name="allCheck" id="allCheck">
+	<br>
+	<hr>
+	사과
+	<input type="checkbox" name="fruits" class="fruits" value="사과">
+	<br> 수박
+	<input type="checkbox" name="fruits" class="fruits" value="수박">
+	<br> 바나나
+	<input type="checkbox" name="fruits" class="fruits" value="바나나">
+	<br> 오렌지
+	<input type="checkbox" name="fruits" class="fruits" value="오렌지">
+	<br>
+	<button id="test">확인</button><br>
+	<span id="result"> </span>
+
+</body>
+</html>

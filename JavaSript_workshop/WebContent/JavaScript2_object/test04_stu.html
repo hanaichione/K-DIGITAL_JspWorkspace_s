@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var sum = 0;
+     function sumsum() {
+		var nums = document.getElementById("v1").value;
+		var numsarr = nums.split("/");
+		for (var i = 0; i < numsarr.length; i++) {
+			sum += parseInt(numsarr[i]);
+		}
+		document.getElementById("result").innerText = sum;
+	}
+  
+</script>
+</head>
+<body>
+	<h3>문자열 처리</h3>
+	값:
+	<input type="text" name="v1" id="v1" value="10/20/30">
+	<button onclick="sumsum()">합계</button>
+	<br> 합계:
+	<span id="result"></span>
+</body>
+</html>

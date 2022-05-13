@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   var mesg = "";
+    function save() {
+		var data = document.getElementById("v1").value;
+		mesg += data + "<br>";
+		document.getElementById("result").innerHTML = mesg;
+	}
+
+</script>
+</head>
+<body>
+ 값:<input type="search" name="v1" id="v1">
+ <button onClick="save()">저장</button><br>
+ 
+ <div id="result">
+ 
+ </div>
+
+</body>
+</html>

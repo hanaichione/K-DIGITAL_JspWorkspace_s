@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+$(function () {
+	// 특정 selector를 포함하는 요소 찾기(태그를 포함하는지)
+	$("div:has(p)").css("color", "red");
+})
+</script>
+</head>
+<body>
+	<div>Hello !!!!</div>
+	<div>Hi! hello</div>
+	<div>MyHello , good</div>
+	<div>
+		<p>Hello</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+  var arr;
+  function create(){
+	arr=[];
+  }
+  function remove(){
+		arr=[];
+		show();
+  }
+  function save(){
+	  var v1 = document.getElementById("v1").value
+	arr.push(v1);	
+  }
+  
+  function show(){
+	var mesg = "";
+	for(var i=0;i<arr.length;i++){
+		mesg +=arr[i]+"<br>";
+	}
+	document.getElementById("result").innerHTML=mesg;
+  }
+  
+</script>
+</head>
+<body>
+<h3>배열 관리</h3>
+<button onclick="create()">배열생성</button>
+<button onclick="remove()">배열삭제</button><br>
+값:<input type="text" name="v1" id="v1" >
+<button onclick="save()">배열에 값 저장</button><br>
+<button onclick="show()">배열에 값 출력</button><br>
+<div id="result"></div>
+</body>
+</html>

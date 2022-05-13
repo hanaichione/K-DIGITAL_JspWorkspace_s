@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function () {
+		$("#a").on("click", getData);
+		$("#b").on("click", get_text_Data);
+	});
+	
+	function getData() {
+		$.ajax({
+			type:"get",
+			url:"sample02_json.jsp",
+			dataType: "json",
+			success: function (data, status, xhr) {
+				//dataType:"json" 바로 사용 가능
+				var username = data.username;
+				var age = data.age;
+				// dataType="text" 일 경우 text => Json object로 변환
+				/* var jsondata = JSON.parse(data);
+				var username = jsondata.username;
+				var age = jsondata.age;*/
+				
+				console.log(username, age);
+				$("#result").text(username + ":" + age);
+			},
+			error: function (xhr, status, error) {
+				console.log("error=================");
+				$("#result").text(error);
+			}
+		})
+	}
+	function get_text_Data() {
+		$.ajax({
+			type:"get",
+			url:"sample02_json.jsp",
+			dataType: "text",
+			success: function (data, status, xhr) {
+				
+				// dataType="text" 일 경우 text => Json object로 변환
+				var jsondata = JSON.parse(data);
+				var username = jsondata.username;
+				var age = jsondata.age;
+				
+				console.log(username, age);
+				$("#result").text(username + ":" + age);
+			},
+			error: function (xhr, status, error) {
+				console.log("error=================");
+				$("#result").text(error);
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<button id="a">ajax요청</button>
+	<button id="b">ajax요청(text Type)</button>
+	<div id="result"></div>
+</body>
+</html>

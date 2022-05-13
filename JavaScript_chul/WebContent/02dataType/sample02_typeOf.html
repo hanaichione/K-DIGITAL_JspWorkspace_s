@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//변수 선언
+	var name = "홍길동";
+	var age = 20;
+	var array = [1,2,3,4]; //배열의 JSON
+	var obj = { "username":"이순신","age": 44};//객체의 JSON
+	var result = true; //boolean
+	var xxx;    // undefined
+	var kkk = null;  // null
+	var zzz = function(){};
+	var xyz = parseInt("123");
+	
+	console.log(typeof name);
+	console.log(typeof age);
+	console.log(typeof array);
+	////////////////////////////
+	console.log(typeof obj);
+	console.log(typeof result);
+	console.log(typeof xxx);	// unde
+	console.log(typeof kkk);	// null -> object 객체를 참조하고 있지 않음
+	console.log(typeof zzz);
+	console.log(typeof xyz);
+	
+	var test = 'aaa';
+	console.log(test=="aaa");
+	////////////////////////////
+	console.log(typeof name=="string");	
+		// 'string' == "string"
+		// java equals, javascript == 사용
+	console.log(typeof age=='number');
+	console.log(typeof array=='object');
+	////////////////////////////
+	console.log()
+</script>
+</head>
+<body>
+
+</body>
+</html>

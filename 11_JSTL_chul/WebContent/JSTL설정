@@ -1,0 +1,5 @@
+web-inf/ lib에 jstl용 드라이버 
+
+jstl.jar
+standard.jar  
+가 포함되어야 함 이후 jdbc/ mybatis 드라이버도 포함되어야함

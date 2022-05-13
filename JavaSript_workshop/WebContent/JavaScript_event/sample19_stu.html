@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var mesg = "";
+	
+	function save() {
+		var data = document.getElementById("v1").value;
+		mesg += data + "<br>";
+		document.getElementById("v1").value = null;
+		document.getElementById("result").innerHTML = mesg;
+	}
+	
+	function enter(e) {
+		if (e.keyCode == 13) {
+			save();
+		}
+	}
+</script>
+</head>
+<body>
+	값:
+	<input type="search" name="v1" id="v1" onkeyup="enter(event)">
+	<div id="result"></div>
+
+</body>
+</html>

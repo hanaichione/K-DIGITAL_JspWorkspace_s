@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function sel(v) {
+		console.log(v);
+		document.getElementById("result").style = "font-size:"+v;
+	}
+
+</script>
+</head>
+<body>
+ 글꼴크기:
+ <select onchange="sel(this.value)">
+  <option>16px</option>
+  <option>32px</option>
+  <option>40px</option>
+  <option>56px</option>
+ </select>
+ <div id="result">
+   안녕하세요.
+ </div>
+</body>
+</html>

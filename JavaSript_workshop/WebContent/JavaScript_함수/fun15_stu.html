@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function bananaCheck(arr) {
+	var count = 0;
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i].includes("banana")){
+			count++;
+		}	
+	}
+	return count;
+}
+
+   var arr = ['BANANA','melon','banana','apple', 'banana','bananaa'];
+   var cnt = bananaCheck(arr);
+   console.log("banana 글자 포함 단어 갯수:", cnt );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

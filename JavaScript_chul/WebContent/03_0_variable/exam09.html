@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var scope="hello";	// 함수 밖 선언, 전역변수
+	
+	function f() {
+		document.write(scope+"<br>");	// unde, hoisting돼서 지역변수를 올려씀
+		var scope="test";	// 지역변수, var 지우면 전역변수 써서 위에 hello 나옴
+		document.write(scope+"<br>");	// test
+		test = 'aaa';
+	}	// end function
+	f();
+	console.log(test);	// var 안 쓰면 지역변수가 아니라 전역변수로 생성
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

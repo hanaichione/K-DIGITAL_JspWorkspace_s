@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function aaa(num) {
+		console.log("aaa 함수", num);
+	}
+	var xxx = aaa;
+	var yyy = aaa(10);
+	xxx(100);
+	aaa(200);
+	
+	func4(100);	// 익명함수 만들기 전에 호출 불가!! (이름이 있는 함수는 가능)
+	
+	var func4 = function(num) { // 변수에 익명함수 저장
+		console.log("func4 " + num);
+	}
+
+	func4(300);
+	var test = func4(10); // 리턴값이 없기 때문에 저장돼있는 것이 없음
+	console.log(test); // undefined
+	var test2 = func4;
+	console.log(test2); // 함수 자체가 저장되어 있음
+	test2(200);
+</script>
+</head>
+<body>
+
+</body>
+</html>

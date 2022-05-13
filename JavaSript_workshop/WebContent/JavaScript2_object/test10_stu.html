@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var name_ = [];
+	var age = [];
+	var add = [];
+	var count = 0;
+	var mesg = "";
+    function store() {
+    	
+    	count++;
+    	console.log(count);
+		name_.push(document.getElementById("username").value);
+		age.push(document.getElementById("age").value);
+		add.push(document.getElementById("address").value);
+		
+		for (var i = 0; i < count; i++) {
+			mesg += (i+1) + " 번째 고객 <br>";
+			mesg += "이름:" + name_[i] + "<br>";
+			mesg += "나이:" + age[i] + "<br>";
+			mesg += "주소:" + add[i] + "<br>";
+		}
+		document.getElementById("result").innerHTML = "<h3>저장완료</h3>"
+		document.getElementById("username").value = null;
+		document.getElementById("age").value = null;
+		document.getElementById("address").value = null;
+		
+	}
+    
+    function print() {
+    	document.getElementById("result").innerHTML = mesg;
+    	mesg = "";
+	}
+
+</script>
+</head>
+<body>
+<h3>JSON 객체</h3>
+이름<input type="text" name="username" id="username"><br>
+나이<input type="text" name="age" id="age"><br>
+주소<input type="text" name="address" id="address"><br>
+<button onclick="store()">저장</button><br>
+<button onclick="print()">출력</button><br>
+<div id="result">
+</div>
+</body>
+</html>

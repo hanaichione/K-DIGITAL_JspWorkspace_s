@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function back() {
+	history.back();
+}
+function home() {
+	console.log(history.length);
+	history.go(-2);	// 두 단계 앞으로 가도록
+}
+</script>
+</head>
+<body>
+현재 05history3.html 입니다.<br>
+<a href="javascript:back()">이전으로</a>
+<a href="javascript:home()">처음으로</a>
+</body>
+</html>

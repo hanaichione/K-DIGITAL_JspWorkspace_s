@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function init() {
+		console.log("모든 html이 모두 DOM으로 생성된 후 실행");
+	}
+	function xxx() {
+		console.log("click");
+	}
+	function yyy() {
+		console.log("onmouseoevr");
+	}
+	function zzz() {
+		console.log("onmouseout");
+	}
+	function kkk(v) {
+		console.log("키보드가 up", v);
+	}
+	function xyz(e) {
+		console.log(e.screenX, e.screenY);
+		console.log(e);
+	}
+</script>
+</head>
+<body onload="init()"> <!-- 처리할 이벤트, 이벤트 핸들러(함수) 등록 : 인라인 방식 -->
+	<button onclick="xxx()" onmouseover="yyy()" onmouseout="zzz()">클릭</button><br>
+	<input type="text" name="userid" onkeyup="kkk(this.value)"><br>
+	<button onclick="xyz(event)">이벤트 정보</button>
+</body>
+</html>

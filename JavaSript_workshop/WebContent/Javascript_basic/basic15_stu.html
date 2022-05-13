@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var n = parseInt(prompt("1.정수값을 입력하시오."));
+	var nn = parseInt(prompt("2.정수값을 입력하시오."));
+	var nnn = parseInt(prompt("3.정수값을 입력하시오."));
+
+/* 	var temp = (n > nn)? n : nn;
+	var max = (temp > nnn)? temp : nnn; */
+	
+	var max = n;
+	
+	if(n<nn){
+		max = nn;
+		if(max<nnn)
+			max = nnn;
+	}
+	if(n<nnn){
+		max = nnn;
+		if(max<nn)
+			max = nn;
+	}
+	
+	console.log("첫번째 입력값은:", n);
+	console.log("두번째 입력값은:", nn);
+	console.log("세번째 입력값은:", nnn);
+	console.log("가장 큰 값:", max);
+</script>
+</head>
+<body>
+
+</body>
+</html>

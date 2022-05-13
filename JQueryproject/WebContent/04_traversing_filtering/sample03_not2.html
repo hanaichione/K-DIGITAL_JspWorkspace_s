@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(function() {
+		$("li").not(function (i, e) {
+//			console.log(e);	// 태그 나옴
+//			console.log(this);	// 태그 나옴
+			console.log($(this).text());	// 태그를 fn로, text() 사용
+			return e.innerText == "A4";
+		}).css("color", "red").end()
+		.not(function (idx, ele) {
+			return idx%3==0;
+		}).css("font-size", "40px");
+	})
+</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+		<li>A1</li>
+		<li>A2</li>
+		<li class="my">A3</li>
+		<li>A4</li>
+		<li>A5</li>
+		<li id="a">A6</li>
+		<li>A7</li>
+		<li>A8</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("p").css("color", "red"); //document.getElementsByTagName().style=""
+		// css(속성이름, 속성값)
+		var data = document.getElementsByTagName("p");
+		// js코드와 jquery 혼용
+		
+		console.log(data);
+		
+		var x = $("p");	// jquery로 선택
+		console.log(x);
+		
+		/* // javascript 객체
+		var data1 = document.getElementById("test");
+		console.log(data1);
+		console.log(data1.innerText);
+		
+		// jquery 객체
+		var jdata = $("#test")
+		console.log(jdata);
+		console.log(jdata.innerText);	// fn(jquery로 접근한 경우) : 기존 js 함수 사용 불가, jquery 함수 사용
+		// fn인 경우 .value => val()
+		//		  innerText => text()
+		//        innerHtml => html()
+		//        img.src="b.jpg" => img.attr("src", "b.jpg")
+		console.log(jdata.text());	// world2 
+		
+		var jdata2 = $("#test2")
+		console.log(jdata2);		// fn 객체
+		console.log(jdata2.value);	// undefined
+		console.log(jdata2.val());	// test2
+		console.log(jdata2.innerText);	// undefiend
+		// jdata2.val("aaaaa");			// 화면에 출력은 aaaaa 나옴
+		console.log(jdata2.attr("value"));	// test2
+		jdata2.attr("value", "bbb");	// value를 bbb로 변경 */
+		
+		console.log(x[0]);	// p태그 나옴
+		console.log(x[0].innerText, x[1].innerText)	// Hello Hello2 나옴
+		console.log($("div"));
+		console.log("첫번째div값", $("div")[0].innerText);	// world
+		console.log("두번째div값", $("div")[1].innerText);	// world2
+		
+		$(x[1]).css("color", "blue");	// tag를 jquery로 변환해서 사용
+		// x[1].style="color:blue";
+		
+		$("#test").text("aaaaa");
+		console.log($("#test").text());	// innerText와 같음
+		
+		// 여러개를 선택할 때는 배열로 각 태그에 인덱스가 부여되어 있음
+		// console.log("두번째div값", $("div")[1].text());	// error : 그냥 태그라 text() 사용 불가
+	})
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Hello</p>
+	<p>Hello2</p>
+	<div>World</div>
+	<div id="test">world2</div>
+	<input type="text" id="test2" value="test2">
+</body>
+</html>

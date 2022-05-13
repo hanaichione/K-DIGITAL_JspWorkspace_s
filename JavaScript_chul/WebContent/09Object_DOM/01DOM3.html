@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function login() {
+		// body로 직접 접근 가능
+		var body = document.body;
+		console.log(body);
+		
+		// id 속성으로 접근 - 가장 자주 사용 
+		var id2 = document.getElementById("xxx");	// # 사용 안 함 id = xxx
+		console.log(id2);
+		// element(node) 하나가 출력(<input type="text" id="xxx" name="userid" class="kkk" value="tester">)
+		console.log(id2.value);	// tester
+		
+		var pw2 = document.getElementById("yyy");
+		console.log(pw2);
+		// <input type="password" id="yyy" name="password" class="kkk" value="1234">
+		console.log(pw2.value);
+		
+		console.log("==========================");
+		
+		// class명 이용
+		var classes = document.getElementsByClassName("kkk");
+		console.log("classes", classes);
+		console.log("classes", classes[0]);	// id 관련된 태그
+		console.log("classes", classes[0].value);	// id의 value값
+		
+		var pw = classes[1];	// pswd 관련 태그
+		console.log(pw);		
+		console.log(pw.value);	// pswd의 value값
+		
+		console.log("==========================");
+		
+		// input 태그명 이용
+		var inputs = document.getElementsByTagName("input");
+		console.log(inputs);
+		
+		var id = inputs[0];
+		console.log(id);	// id 관련 태그만 출력
+		console.log(id.value);	// tester 출력
+		
+		var pw = inputs[1];
+		console.log(pw.value);	// 1234 출력
+		
+		console.log("==========================");
+		
+		// name 속성명 이용
+		var xx = document.getElementsByName("userid");	// 배열에 저장
+		console.log(xx[0]);
+		
+		console.log("==========================");
+		
+		// css selector : querySelector 이용
+		var id = document.querySelector("#xxx");	// id로 선택시 하나만 선택, #기호 사용!!
+		console.log(id);
+		
+		console.log("==========================");
+		
+		// css selector : querySelectorAll 이용
+		var tags = document.querySelectorAll(".kkk"); // class로 선택, .기호 사용!!
+		console.log(tags);
+		console.log(tags[0]);
+	}
+</script>
+</head>
+<body>
+	아이디<input type="text" id="xxx" name="userid" class="kkk" value="tester"><br>
+	비밀번호<input type="password" id="yyy" name="password" class="kkk" value="1234"><br>
+	<button onClick="login()">로그인</button>
+</body>
+</html>

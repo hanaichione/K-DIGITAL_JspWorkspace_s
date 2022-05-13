@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+  
+    var arr = [];
+    var n = 0;
+    var cnt = 0;
+    var sum = 0;
+    function three(){
+    	cnt++;
+        n+=3;
+    	arr.push(n);
+    	sum+=n;
+    	var mesg = "<br>클릭한 수: " + cnt;
+    	    mesg += "<br>합계: " + sum;
+    	document.getElementById("result").innerHTML = arr+mesg;
+    	
+    } 
+
+</script>
+</head>
+<body>
+<h3>배수 출력</h3>
+<button onclick="three()">3의 배수</button>
+<div id="result">
+
+</div>
+</body>
+</html>
